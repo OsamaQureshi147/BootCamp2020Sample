@@ -16,7 +16,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
         with:
-          version: 12
+          version: 14
       - name: GitHub Action for Yarn
         # You may pin to the exact commit or the version.
         # uses: Borales/actions-yarn@4965e1a0f0ae9c422a9a5748ebd1fb5e097d22b9
@@ -42,5 +42,5 @@ jobs:
         run: npm install -g surge
       
       - name: deploying on surge
-        run: surge ./build http://react_session2_osama.surge.sh/ --token ${{secrets.SURGECLASS2}}
+        run: surge ./BootCamp2020Sample/class2-project/build http://react_session2_osama.surge.sh/ --token ${{secrets.SURGECLASS2}}
   
