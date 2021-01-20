@@ -42,5 +42,5 @@ jobs:
         run: npm install -g surge
       
       - name: deploying on surge
-        run: surge ./BootCamp2020Sample/class2-project/build http://react_session2_osama.surge.sh/ --token ${{secrets.SURGECLASS2}}
+        run: surge ./build http://react_session2_osama.surge.sh/ --token ${{secrets.SURGECLASS2}}
   
